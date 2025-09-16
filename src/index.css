@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+@theme {
+  --color-purple: #c27aff;
+  --color-background: #1a0b2e;
+  --color-white: #ffffff;
+  --color-pink: #ff7fb0;
+
+  --font-heading: "Raleway", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --font-script: "Marck Script", cursive;
+}
+
+
+/* Raleway → All headings (h1, h2, h3).
+
+Roboto → Body text, paragraphs, buttons.
+
+Space Mono → Tech tags or code sections.
+
+Marck Script → Signature or special decorative text (e.g., your name in hero section). */
