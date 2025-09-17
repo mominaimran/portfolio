@@ -38,7 +38,7 @@ const ContactSection = () => {
     >
       {/* Section Heading */}
       <div className="text-center max-w-2xl mx-auto mb-8">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-3">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-3">
           Get in{" "}
           <span className="bg-gradient-to-r from-[#8200db] to-[#ff4ecd] bg-clip-text text-transparent">
             Touch

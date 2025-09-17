@@ -28,7 +28,7 @@ const Services = () => {
     <section id="services" className="py-16 px-6 md:px-12 lg:px-32 bg-[#1a0b2e] text-white">
       {/* Section Heading */}
      <div className="text-center mb-12">
-  <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
+  <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-4">
     What I <span className="bg-gradient-to-r from-[#8200db] to-[#ff4ecd] bg-clip-text text-transparent">Offer</span>
   </h2>
   <p className="text-gray-300 text-lg">

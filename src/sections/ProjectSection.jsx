@@ -23,7 +23,7 @@ const projects = [
 const ProjectSection = () => {
   return (
     <section id="projects" className="w-full py-20 px-6 md:px-20 bg-[#1a0b2e]">
-      <h2 className="text-3xl text-white md:text-5xl font-extrabold mb-12 text-center">
+      <h2 className="text-2xl sm:text-3xl text-white md:text-5xl font-extrabold mb-12 text-center">
         Featured{" "}
         <span className="bg-gradient-to-r from-[#8200db] to-[#ff4ecd] bg-clip-text text-transparent">
           Projects
