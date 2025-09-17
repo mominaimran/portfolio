@@ -6,16 +6,16 @@ const Navbar = () => {
   const navLinks = ["Home", "Skills", "Projects", "Services", "Contact"];
 
   return (
-    <nav className="bg-background font-body sticky top-4 z-50 text-white border-[1px] rounded-[70px] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] h-[70px] w-full px-4">
-      <div className="max-w-6xl mx-auto flex justify-between items-center h-full">
+    <nav className="bg-background font-body sticky top-4 z-50 text-white border border-white/80 shadow-md h-[60px] md:h-[70px] w-full px-4 rounded-[50px] md:rounded-[70px]">
+      <div className="w-full flex justify-between items-center h-full px-2 sm:px-4">
         {/* Word Logo */}
-       <div className="h-full flex items-center">
-  <span className="relative text-xl md:text-2xl font-extrabold bg-gradient-to-r from-[#8200db] to-[#ff4ecd] bg-clip-text text-transparent tracking-wider overflow-hidden group">
-    DevStudio.
-    {/* Shine effect */}
-    <span className="absolute inset-0 translate-x-[-100%] bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
-  </span>
-</div>
+        <div className="h-full flex items-center">
+          <span className="relative text-lg sm:text-xl md:text-2xl font-extrabold bg-gradient-to-r from-[#8200db] to-[#ff4ecd] bg-clip-text text-transparent tracking-wider overflow-hidden group">
+            DevStudio.
+            {/* Shine effect */}
+            <span className="absolute inset-0 translate-x-[-100%] bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
+          </span>
+        </div>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-8 text-sm font-medium">
@@ -43,9 +43,11 @@ const Navbar = () => {
 
       {/* Mobile Nav Links */}
       <ul
-        className={`md:hidden flex flex-col gap-3 bg-background text-sm px-4 transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-60 py-4 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden flex flex-col gap-3 bg-background text-sm px-4 transition-all duration-500 ease-in-out ${
+          isOpen
+            ? "max-h-64 py-4 opacity-100 scale-100 rounded-b-2xl shadow-lg border-x border-b border-white/10"
+            : "max-h-0 opacity-0 scale-95"
+        } overflow-hidden w-full origin-top`}
       >
         {navLinks.map((link) => (
           <li key={link}>
