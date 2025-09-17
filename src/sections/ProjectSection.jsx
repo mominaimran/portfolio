@@ -22,15 +22,19 @@ const projects = [
 
 const ProjectSection = () => {
   return (
-    <section id="projects" className="w-full py-20 px-6 md:px-20 bg-[#1a0b2e]">
-      <h2 className="text-2xl sm:text-3xl text-white md:text-5xl font-extrabold mb-12 text-center">
+    <section
+      id="projects"
+      className="w-full py-16 sm:py-20 px-4 sm:px-8 md:px-16 lg:px-20 bg-[#1a0b2e]"
+    >
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 sm:mb-12 text-center text-white">
         Featured{" "}
         <span className="bg-gradient-to-r from-[#8200db] to-[#ff4ecd] bg-clip-text text-transparent">
           Projects
         </span>
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-10">
+      {/* Responsive Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} data={project} />
         ))}
