@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="bg-background px-4 sm:px-6 md:px-16 text-white flex flex-col md:flex-row items-center justify-between py-12 sm:py-8 md:py-12 md:min-h-screen"
+      className="bg-background px-4 sm:px-6 md:px-16 text-white flex flex-col md:flex-row items-center justify-between py-12 md:min-h-screen"
     >
       {/* Left Content */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-4 sm:space-y-5">

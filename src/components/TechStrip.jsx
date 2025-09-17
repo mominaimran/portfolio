@@ -1,50 +1,50 @@
-import React, { useEffect, useRef, useState } from 'react'
-import gsap from 'gsap'
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
 const TechStrip = () => {
-  const marqueeRef = useRef(null)
-  const [scrollDir, setScrollDir] = useState('left')
-  const tweenRef = useRef(null)
+  const marqueeRef = useRef(null);
+  const [scrollDir, setScrollDir] = useState("left");
+  const tweenRef = useRef(null);
 
   const lines = [
-    'Creative Tech • Clean Code • Passion • Repeat',
-    'Clean Code • Pixel Perfect UI • Fast Performance',
-    'Code • Build • Deploy • Innovate',
-  ]
+    "Creative Tech • Clean Code • Passion • Repeat",
+    "Clean Code • Pixel Perfect UI • Fast Performance",
+    "Code • Build • Deploy • Innovate",
+  ];
 
   // Scroll direction detection
   useEffect(() => {
-    let lastScrollY = window.scrollY
+    let lastScrollY = window.scrollY;
     const handleScroll = () => {
-      const currentY = window.scrollY
-      setScrollDir(currentY > lastScrollY ? 'left' : 'right')
-      lastScrollY = currentY
-    }
+      const currentY = window.scrollY;
+      setScrollDir(currentY > lastScrollY ? "left" : "right");
+      lastScrollY = currentY;
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // GSAP Marquee Setup
   useEffect(() => {
-    if (!marqueeRef.current) return
-    if (tweenRef.current) tweenRef.current.kill()
+    if (!marqueeRef.current) return;
+    if (tweenRef.current) tweenRef.current.kill();
 
-    const totalWidth = marqueeRef.current.scrollWidth / 2
+    const totalWidth = marqueeRef.current.scrollWidth / 2;
 
     tweenRef.current = gsap.to(marqueeRef.current, {
-      x: scrollDir === 'left' ? -totalWidth : 0,
+      x: scrollDir === "left" ? -totalWidth : 0,
       duration: 80, // Slower speed
-      ease: 'linear',
+      ease: "linear",
       repeat: -1,
-    })
+    });
 
-    return () => tweenRef.current.kill()
-  }, [scrollDir])
+    return () => tweenRef.current.kill();
+  }, [scrollDir]);
 
   // Pause on hover
-  const handleMouseEnter = () => tweenRef.current?.pause()
-  const handleMouseLeave = () => tweenRef.current?.resume()
+  const handleMouseEnter = () => tweenRef.current?.pause();
+  const handleMouseLeave = () => tweenRef.current?.resume();
 
   return (
     <div
@@ -60,9 +60,7 @@ const TechStrip = () => {
       {/* Scrolling Text */}
       <div
         ref={marqueeRef}
-        className="flex gap-10 text-2xl sm:text-3xl md:text-4xl uppercase font-bold text-background whitespace-nowrap px-2 font-mono space-x-0
-        [text-shadow:1px_1px_2px_rgba(0,0,0,0.1),-1px_-1px_2px_rgba(255,255,255,0.8)]"
-      >
+        className="flex gap-4 sm:gap-8 md:gap-10 text-base sm:text-xl md:text-3xl lg:text-4xl uppercase font-bold text-background whitespace-nowrap px-1 sm:px-2 font-mono [text-shadow:1px_1px_2px_rgba(0,0,0,0.1),-1px_-1px_2px_rgba(255,255,255,0.8)]">
         {Array(10)
           .fill(lines)
           .flat()
@@ -71,7 +69,7 @@ const TechStrip = () => {
           ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TechStrip
+export default TechStrip;
